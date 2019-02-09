@@ -14,3 +14,13 @@ for repo in "${repos[@]}"; do
         git subtree add --prefix drivers/staging/$repo https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/$repo $1
     fi
 done
+
+# note for self
+#git fetch https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/prima <Tag>
+#git merge -s ours --no-commit --allow-unrelated-histories FETCH_HEAD
+#git read-tree --prefix=drivers/staging/prima -u FETCH_HEAD
+#git commit
+
+#git fetch https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/prima <Tag>
+#git merge -s subtree --no-commit FETCH_HEAD
+#git commit
